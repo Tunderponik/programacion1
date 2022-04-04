@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>
+area de un trapecio
+</title>
+<script language="javascript">
+function trape(form){
+var xbmay=eval(form.bmay.value);
+var xbmen=eval(form.bmen.value);
+var xaltura=eval (form.altura.value);
+var xarea=eval (form.area.value);
+xarea=(xbmay + xbmen)*xaltura/2;
+form.area.value=xarea;
+}
+function xxx(){
+window.close();
+}
+</script>
+</head>
+<body bgColor="purple">
+<marquee bgcolor="black">
+<i><font size=5 color="pink" face="algebrian">
+AREA DE UN TRAPECIO
+</font>
+</i>
+</marquee>
+<form>
+<center>
+<table border="3">
+<tr>
+<td>
+BASE MAYOR
+</TD>
+<TD>
+<input type="text" name="bmay">
+</td>
+</tr>
+<tr>
+<td>BASE MENOR</td>
+<td><input type="text" name="bmen"></td>
+</tr>
+<tr>
+<td>ALTURA</td>
+<td><input type="text" name="altura"></td>
+</tr>
+<tr>
+<td>AREA:</td>
+<td><input type="text" name="area" readonly>
+</td>
+</tr>
+</table>
+<input type="reset" name="limpiar" value="limpiar">
+<input type="button" name="calcular1" value="Calcular" onclick="trape(this.form)">
+<input type="button" name="salir" value="salir" onclick="xxx()">
+</center>
+</form>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area de Trapecio</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="icon" type="image/x-icon" href="/ejercicio_3/Darkseid_-_Logo.png">
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+
+        h1 {
+            font-family: 'Rubik Mono One', sans-serif;
+        }
+        hr {
+            color: #2fa4e7;
+        }
+    </style>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Ejercicio 4 - Área de Trapecio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">3</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">4</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    <div class="container mt-3">
+        <div class="row">
+            
+            <!-- Primera columna Input y Boton -->
+            <div class="col-6">
+                <h1>Área de Trapecio</h1>
+
+                <div class="mb-3">      
+                    <label class="form-label" for="">Base mayor</label>
+                    <input class="form-control" placeholder="Base mayor" type="text" name="bm" id="">
+                </div>
+                <div class="mb-3">      
+                    <label class="form-label" for="">correo</label>
+                    <input class="form-control" type="email" name="" id="">
+                </div>
+                <div class="mb-3">      
+                    <label class="form-label" for="">correo</label>
+                    <input class="form-control" type="email" name="" id="">
+                </div>
+
+                <div class="row">
+                    <form>
+                        <table>
+                            <tr>
+                                <td>
+                                    <input placeholder="Base menor" type="text" name="bn">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input placeholder="Altura" type="text" name="altura">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input placeholder="Resultado" type="text" name="resultado" readonly>
+                                </td>
+                            </tr>
+                        </table>
+                        <input type="button" class="btn btn-primary" name="calcular1" value="Calcular" onclick="trapecio(this.form)">
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Trapecio_is%C3%B3sceles.svg" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script language="javascript" src="main.js"></script>
+</body>
+</html>
