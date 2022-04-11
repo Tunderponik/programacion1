@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:ital,wght@0,700;1,900&family=Secular+One&display=swap');
+
+        body {
+            font-family: 'Rubik', sans-serif;
+            font-style: italic;
+        }
+        h1 {
+            size: 50px;
+            color: #033c73;
+        }
+        hr {
+            border: 10px solid #033c73;
+            border-radius: 5px;
+        }
+
+        .center {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 27%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+    </style>
+    <h1>Ejercicio 5 - Formula Matemática</h1>
+    <hr>
+    <div class="container mt-3">
+
+        <div class="row">
+            <!-- Primera columna Input y Boton -->
+            <div class="col-6">
+
+                <div class="mb-6">
+                    <label class="form-label" for="">A</label>
+                    <input id="inp_dato1" class="form-control" type="number" placeholder="Valor A">
+                </div>
+                
+                <div class="mb-6">
+                    <label class="form-label" for="">B</label>
+                    <input id="inp_dato2" class="form-control" type="number" placeholder="Valor B">
+                </div>
+    
+                <div class="mb-6" >
+                    <label class="form-label" for="">C</label>
+                    <input id="inp_dato3" class="form-control" type="number" placeholder="Valor C">
+                </div>
+                <div class="center">
+                    <button class="btn btn-primary mt-2 " id="mostrar_respuesta">Calcular</button>
+                </div>
+
+                
+            </div>
+                <div class="col-lg-6">
+                    <img src="https://c.tenor.com/jUxQCuId54IAAAAC/protogen-lick.gif" alt="">
+                </div>
+            <div class="col-6">
+                <div>
+                <h1 class="" id="Resultado"></h1>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>
