@@ -1,0 +1,37 @@
+<!DOCTYPE html>	
+<html><head><meta charset="utf-8"/>
+<title>EJERCICIO N°2</title>
+<script src="main.js"></script>
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:ital,wght@0,700;1,900&family=Secular+One&display=swap');
+
+        body {
+            font-family: 'Rubik', sans-serif;
+            size: 50px;
+            color: #033c73;
+        }
+        hr {
+            border: 10px solid #033c73;
+            border-radius: 5px;
+        }
+
+        .center {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 27%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+    </style>
+<h2>Conversor de temperaturas</h2>
+<input type="text" name="tempEntrada" id="tempEntrada">
+<input type="button" value="Pasar a Fahrenheit" onClick="toFahrenheit()">
+<input type="button" value="Pasar a Celsius" onClick="toCelsius()"><br>
+<div id="Zona1"></div>
+<div id="Zona2"></div>
+<div id="Zona3"></div>
+</body>
+</html>

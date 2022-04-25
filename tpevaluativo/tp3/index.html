@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>EJERCICIO N°2</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <script>
+ 
+function algoritmo()
+{
+    let cateto_a, cateto_b, hipotenusa;
+    cateto_a = parseFloat (document.formulario1.cateto_a.value);
+    cateto_b = parseFloat (document.formulario1.cateto_b.value);
+    hipotenusa=Math.sqrt(cateto_a*cateto_a+cateto_b*cateto_b);
+    document.formulario1.hipotenusa.value = hipotenusa;
+}
+ 
+        </script>
+    </head>
+    <body>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:ital,wght@0,700;1,900&family=Secular+One&display=swap');
+    
+            body {
+                font-family: 'Rubik', sans-serif;
+                font-style: italic;
+            }
+            h1 {
+                size: 50px;
+                color: #033c73;
+            }
+            hr {
+                border: 10px solid #033c73;
+                border-radius: 5px;
+            }
+    
+            .center {
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 27%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+        </style>
+        
+        <form name="formulario1">
+            <table style="text-align: left; margin-left: auto; margin-right: auto;">
+                <tbody>
+                    <tr>
+                        <td>
+                            <h1 for="cateto_a">Ingresa el valor de cateto a:</label>
+                        </td>
+                        <td>
+                            <input name="cateto_a" required="required" step="0.000001" type="number" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h1 for="cateto_b">Ingresa el valor de cateto b:</label>
+                        </td>
+                        <td>
+                            <input name="cateto_b" required="required" step="0.000001" type="number" />
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td colspan="2" rowspan="1">
+                            <button>
+                                <input value="Procesar" type="button" onclick="algoritmo();" />
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h1 for="hipotenusa">Valor de la hipotenusa:</label>
+                        </td>
+                        <td>
+                            <input name="hipotenusa" step="0.000001" type="number" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </body>
+</html>
