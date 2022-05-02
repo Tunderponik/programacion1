@@ -9,7 +9,7 @@ function algoritmo()
     let cateto_a, cateto_b, hipotenusa;
     cateto_a = parseFloat (document.formulario1.cateto_a.value);
     cateto_b = parseFloat (document.formulario1.cateto_b.value);
-    hipotenusa=Math.sqrt(cateto_a*cateto_a+cateto_b*cateto_b);
+    hipotenusa=Math.sqrt( (cateto_a*cateto_a ) + cateto_b*cateto_b );
     document.formulario1.hipotenusa.value = hipotenusa;
 }
  
@@ -63,9 +63,10 @@ function algoritmo()
                     </tr>
                     <tr align="center">
                         <td colspan="2" rowspan="1">
-                            <button>
-                                <input value="Procesar" type="button" onclick="algoritmo();" />
+                            <button type="button" onclick="algoritmo();">
+                              Procesar
                             </button>
+
                         </td>
                     </tr>
                     <tr>
