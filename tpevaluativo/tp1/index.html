@@ -1,17 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EJERCICIO N°1</title>
     <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="icon" type="image/x-icon" href="/tpevaluativo/ford-icon.png">
 </head>
+
 <body>
-    
+    <script src="main.js"></script>
 
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:ital,wght@0,700;1,900&family=Secular+One&display=swap');
 
-        <!---->
-        <script src="main.js"></script>
+        body {
+            font-family: 'Rubik', sans-serif;
+            font-style: italic;
+        }
+        h1 {
+            size: 50px;
+            color: #033c73;
+        }
+        hr {
+            border: 10px solid #033c73;
+            border-radius: 5px;
+        }
+
+        .center {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 27%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+    </style>
+
+    <table style="text-align: left; margin-left: auto; margin-right: auto;">
+        <tbody>
+            <tr>
+                <td>
+                    <h1>CALCULAR EL DESCUENTO DE FORD</h1>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <select  id="ford">
+                        <option value="1750000">Ka</option>
+                        <option value="1950000">Fiesta</option>
+                        <option value="2560000">Focus</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="descuento()" class="btn-primary" id="mostrar_respuesta">Descontar</button>
+                </td>
+            </tr>
+                <td>
+                    <h1 id="mssg_resultado"></h1>
+                </td>
+            </tr>
+            </tr>
+                <td>
+                    <img src="/tpevaluativo/ford.jpg" alt="">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <footer class="bg-light text-center text-lg-start">
+        <div class="text-center p-3" style="color: black; background-color: #2fa4e7;">
+          © 2022 Ford Industries, Inc. Todos los derechos resevados.
+        </div>
+    </footer>
 </body>
 </html>
