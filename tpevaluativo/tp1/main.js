@@ -7,7 +7,7 @@ function descuento() {
        resultado =   1950000 - ((precio / 100) * 5) 
     }
     else {
-        if (precio === 2500000) {
+        if (precio == 2560000) {
            resultado = 2560000 - ((precio / 100) * 10) 
         }
         else {
