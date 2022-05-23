@@ -4,9 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fetch Anime</title>
+<link rel="stylesheet" href="bootstrap.min.css">
 </head>
 <body>
-    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:ital,wght@0,700;1,900&family=Secular+One&display=swap');
+
+        body {
+            font-family: 'Rubik', sans-serif;
+            background-color: black;
+        }
+        h1 {
+            size: 100px;
+        }
+        hr {
+            border: 10px solid #033c73;
+            border-radius: 5px;
+        }
+    </style>
+    <nav class="navbar bg-primary navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand " href="#">Fetch Anime</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row" id="display_anime">
+        </div>
+    </div>
+
+    <script src="main.js"></script>
 </body>
 </html>
