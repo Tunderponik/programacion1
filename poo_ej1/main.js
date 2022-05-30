@@ -1,10 +1,15 @@
-import Vehiculo from "./vehiculo.js"
+import Triangulo from "./triangulo.js";
 
-function mostrar(){
-    const km = document.getElementById("inp_km").value
-    const marca = document.getElementById("inp_marca").value
+const mostrar_triangulo=()=>{
+    const triangulo_a= document.getElementById("tria_base").value
+    const triangulo_b= document.getElementById("tria_altura").value
 
-    const auto = new Vehiculo()
-    auto.mostrar_datos_vehiculos()
+
+    const triangulo_instancia= new Triangulo(triangulo_a,triangulo_b)
+    
+    const area_triangulo = triangulo_instancia.calculo_triangulo()
+
+    document.getElementById("at").textContent = area_triangulo
 }
-document.getElementById("btn_mostrar").addEventListener("click", mostrar)
+
+document.getElementById("btn_calcular").addEventListener("click",mostrar_triangulo)

@@ -4,9 +4,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Programacion Orientada a Objetos - Ejercicio 1</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
 </head>
 <body>
+    <div class="container">
+
+       <div class="row">
+           <div class="col-md-4 mt-5">
+                <h4>Triangulo</h4>
+                <h1 id="h1_triangulo"></h1>
+                <div class="mb-3">
+                    <label class="for-label">Base</label>
+                    <input type="number" class="form-control" id="tria_base">
+                </div>
+                <div class="mb-3">
+                    <label class="for-label">Altura</label>
+                    <input type="number" class="form-control" id="tria_altura">
+                </div>
+                <h4 id="at"></h4>
+           </div>
+
+           <div class="col-md-4 mt-5">
+            <h4>Rectangulo</h4>
+            <h1 id="h1_rectangulo"></h1>
+            <div class="mb-3">
+                <label class="for-label">Base</label>
+                <input type="number" class="form-control" id="rec_base">
+            </div>
+            <div class="mb-3">
+                <label class="for-label">Altura</label>
+                <input type="number" class="form-control" id="rec_altura">
+            </div>
+       </div>
+
+       <div class="col-md-6 mt-5">
+        <h4>Trapecio</h4>
+        <h1 id="h1_trapecio"></h1>
+        <div class="mb-3">
+            <label class="for-label">Base</label>
+            <input type="number" class="form-control" id="trape_base">
+        </div>
+        <div class="mb-3">
+          <label class="for-label">Base 2</label>
+          <input type="number" class="form-control" id="trape_basedos">
+      </div>
+        <div class="mb-3">
+            <label class="for-label">Altura</label>
+            <input type="number" class="form-control" id="trape_altura">
+        </div>
+        
+   </div>
+
+
+
+
+
+       <button class="btn btn-success" id="btn_calcular">Calcular</button>
+       </div>
+
+
+        
+    </div>
+    
     <script src="main.js" type="module"></script>
 </body>
 </html>
