@@ -1,10 +1,16 @@
-let consolas = ['PlayStation','Xbox','Nintento Game Cube','Sepa Dreamcast','Game Boy Advanced','Pokemon Mini']
+let lenguajes = ['Bitcoin', 'Etherium', 'Tether', 'BNB' , 'Cardano' , 'Dai' , 'Helium', 'Shiba Inu' , 'Tron' , 'Cronos','Solana']
 
-//Agregar la consola nintendo 64 al final del arreglo
-consolas.push('Nintendo 64')
+//Agregar leguaje al inicio del arreglo
+lenguajes.unshift('Stellar')
 //Buscar el index de Game boy Advanced
-let index=consolas.indexOf("Game Boy Advanced")
+//let index=consolas.indexOf("Game Boy Advanced")
 //Eliminar index y PM
+lenguajes.delete('Shiba Inu')
+lenguajes.delete('Tron')
+
+//Agregar lenguaje al final
+lenguajes.unshift('Gate')
+
 consolas.splice(index,2)
 
 const mostrar = () => {
