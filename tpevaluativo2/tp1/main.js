@@ -1,28 +1,23 @@
-const consumir_dolar = async() => {
-    const dolar = await fetch('https://www.dolarsi.com/api/api.php?type=valoresprincipales')
+const consumir_dolar =async() =>{
+    const api= await fetch(' https://www.dolarsi.com/api/api.php?type=valoresprincipales')
+    const dolar = await api.json()
 
-    const datos_dolar = await dolar.json()
+    let filas = []
 
-let lista_criptos = []
-    datos_dolar.forEach(criptos => {
-        //console.log(element.name)
+    dolar.forEach( (element,index) => {
+
         let fila = `
-
-        <tr>
-        <td>${dolar.compra}</td>
-        <td>${dolar.venta}</td>
-        <td>${dolar.nombre}</td>
-    </tr>
-
+            <tr>
+                <td>${index}</td>    
+                <td>${element.casa.nombre}</td>
+                <td>${element.casa.compra}</td>
+                <td>${element.casa.venta}</td>
+            </tr>
+            `
+            filas.push(fila)
         
-        
-        `
-        lista_dolar.push(fila)
-});
+        });
 
-document.getElementById("main_dolar").innerHTML = lista_dolar.join('')
-
+document.getElementById("tbl_dolar").innerHTML = filas.join('')           
 }
-
-//invocamos la funcion
 consumir_dolar()

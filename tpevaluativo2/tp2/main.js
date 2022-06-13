@@ -1,49 +1,42 @@
-let lenguajes = ['Bitcoin', 'Etherium', 'Tether', 'BNB' , 'Cardano' , 'Dai' , 'Helium', 'Shiba Inu' , 'Tron' , 'Cronos','Solana']
+let Criptos = ["Bitcoin","Etherium","Tether","BNB","Cardano","Dai","Helium","Shiba Inu","Tron","Crono s","Solana"]
 
-//Agregar leguaje al inicio del arreglo
-lenguajes.unshift('Stellar')
-//Buscar el index de Game boy Advanced
-//let index=consolas.indexOf("Game Boy Advanced")
-//Eliminar index y PM
-lenguajes.delete('Shiba Inu')
-lenguajes.delete('Tron')
+//Añadir Stellar al principio del arreglo
+Criptos.unshift("Stellar")
 
-//Agregar lenguaje al final
-lenguajes.unshift('Gate')
+//Buscar indice
+let indice = Criptos.indexOf("Shiba Inu")
 
-consolas.splice(index,2)
+//Eliminar 2 lugares
+Criptos.splice(indice,2)
+
+//Añadir Gate al final
+Criptos.push("Gate")
+console.log(Criptos)
 
 const mostrar = () => {
-    let final=consolas[consolas.length-1]    
-
-document.getElementById('h2').textContent = ` 
-    Longitud del arreglo: ${consolas.length}
-`
-document.getElementById('h2_final').textContent = `
-    Elemento final del arreglo: ${final}
-`
-
-document.getElementById('h2_posicion').textContent = `  
-    Posicion 4 del array: ${consolas[4]}
-`
+    let indice = Criptos.indexOf("Helium")
+    document.getElementById("p_criptos").innerHTML = `
+    Longitud Arreglo: ${Criptos.length}
+    <br>
+    Último Arreglo: ${Criptos[Criptos.length-1]}
+    <br>
+    Moneda Helium: ${indice} - ${Criptos[indice]}
+    `
 }
 
-document.getElementById('btn').addEventListener("click",mostrar)
+document.getElementById('btn_parrafo').addEventListener("click",mostrar)
 
-let con = []
-const recorrido = () => {
-
-    consolas.forEach((index,element) => {    
+let bolsa = []
+const recorrer = () => {
+    Criptos.forEach((element,index) => {
         let fila = `
-        <tr>
-        <th>${element}</th>
-        <td >${index}</td>
-        </tr>
+        <li class="list-group-item-success"> Element: ${element}  <--> Index: ${index}</li>
         `
-        con.push(fila)
-    });
 
-    document.getElementById('t_body').innerHTML=con.join('')
+        bolsa.push (fila)
+    });
+    document.getElementById("lista").innerHTML = bolsa.join('')
 }
 
-document.getElementById('btn_tbl').addEventListener("click",recorrido)
+//Evento
+document.getElementById('btn_mostrar').addEventListener("click",recorrer);
