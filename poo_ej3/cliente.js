@@ -25,6 +25,7 @@ export default class Cliente {
         }
         //Invocamos al método obtener
         this.obtener_clientes()
+        this.vaciar_formulario()
     }
 
     obtener_clientes(){
@@ -71,5 +72,9 @@ export default class Cliente {
 
         //Volvemos a reconstruir la tabla
         this.obtener_clientes()
+
+        vaciar_formulario() {
+            document.getElementById("btn_cliente").reset()
+        }
     }
 }
