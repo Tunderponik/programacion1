@@ -1,15 +1,15 @@
 export default class Cliente {
-    constructor(nom, ape, dni){
+    constructor(nom, ape, precio){
         this.nombre = nom
         this.apellido = ape
-        this.dni = dni
+        this.precio = precio
     }
     
     guardar_cliente(){
             let nuevo_cliente = {
                 nombre: this.nombre,
                 apellido: this.apellido,
-                dni: this.dni,
+                precio: this.precio,
             }
         if("listado_clientes" in localStorage){
             let lista_clientes = JSON.parse(localStorage.getItem("listado_clientes"))
@@ -35,9 +35,10 @@ export default class Cliente {
         listado_clientes.forEach ( (element, index) => {
             let fila = `
             <tr>
+                <td>${index+1}</td> 
                 <td>${element.nombre}</td>
                 <td>${element.apellido}</td>
-                <td>${element.dni}</td>
+                <td>${element.precio}</td>
                 <td>
                     <button onclick="almacenar_indice(${index})" data-bs-toggle="modal" data-bs-target="#mymodal" class="btn btn-danger"><i class="fa fa-trash"></i></button>
                     <button onclick="editar(${index})" class="btn btn-primary btn-sm" class="btn btn-primary"><i class="fa fa-pencil"></i></button>
@@ -66,7 +67,7 @@ export default class Cliente {
 
         listado_clientes[index].nombre = document.getElementById("inp_nombre").value
         listado_clientes[index].apellido = document.getElementById("inp_apellido").value
-        listado_clientes[index].dni = document.getElementById("inp_dni").value
+        listado_clientes[index].precio = document.getElementById("inp_precio").value
 
         localStorage.setItem("listado_clientes", JSON.stringify(listado_clientes))
 
