@@ -12,9 +12,12 @@
     <link rel="stylesheet" href="/tpevaluativo3/index.css">
 </head>
 
-<body style="background-color: #2D2D30;">
-    <!--Cascada-->
-
+<body style="background-color:beige">
+  <!--Scripts-->
+  <script src="bootstrap.bundle.min.js"></script>
+  <script src="producto.js" type="module"></script>
+  
+  <!--Cascada-->
     <body>
         <div class="container-fluid text-center">
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
@@ -30,40 +33,39 @@
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Géneros
+                      Catálogo de Fursuits
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">Acción</a></li>
-                      <li><a class="dropdown-item" href="#">Animación</a></li>
-                      <li><a class="dropdown-item" href="#">Ciencia Ficción</a></li>
-                      <li><a class="dropdown-item" href="#">Comedia</a></li>
-                      <li><a class="dropdown-item" href="#">Fantasía</a></li>
-                      <li><a class="dropdown-item" href="#">Musical</a></li>
-                      <li><a class="dropdown-item" href="#">Terror</a></li>
+                      <li><a class="dropdown-item" href="#">Arctic Fox</a></li>
+                      <li><a class="dropdown-item" href="#">Protogen</a></li>
+                      <li><a class="dropdown-item" href="#">Primagen</a></li>
+                      <li><a class="dropdown-item" href="#">Kettu</a></li>
+                      <li><a class="dropdown-item" href="#">Blue Fox</a></li>
+                      <li><a class="dropdown-item" href="#">Puro</a></li>
                       <li><hr class="dropdown-divider"></li>
                       <li><a class="dropdown-item" href="#">Otros</a></li>
                     </ul>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Películas
+                      Noticias
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">Estrenos</a></li>
-                      <li><a class="dropdown-item" href="#">Más Vistas</a></li>
+                      <li><a class="dropdown-item" href="#">Actualizaciones</a></li>
+                      <li><a class="dropdown-item" href="#">Nuevas Promociones</a></li>
                       <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Catálogo</a></li>
+                      <li><a class="dropdown-item" href="#">Nuevo Catálogo</a></li>
                     </ul>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Series
+                      ¡Ofertas!
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">Temporadas</a></li>
-                      <li><a class="dropdown-item" href="#">Episodios</a></li>
+                      <li><a class="dropdown-item" href="#">25% OFF</a></li>
+                      <li><a class="dropdown-item" href="#">40% OFF</a></li>
                       <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Catálogo</a></li>
+                      <li><a class="dropdown-item" href="#">¡50% OFF + Garantía!</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -119,45 +121,34 @@
     
     <!--Productos-->
     <br>
+
+    <div class="row">
+      <div class="col bg-transparent">
+          <h1 style="font-family: Rubik Mono One; color: black;">Adéntrate en Nuestra Tienda</h1>
+          <hr style="color: blue;">
+      </div>
+    </div>
+    <br>
+
     <div class="container mt-12">
         <div class="row" >
-            <div class="col-lg-8" style="background-color:green; border-radius: 10% / 50%;">
-                <h1><b>Nuestros Productos</b></h1>
-            <form id="form_cliente">
-                <div class="mb-3" >
-                    <label class="form-label">Nombre</label>
-                    <input id="inp_nombre" class="form-control" type="text" autocomplete="off">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Apellido</label>
-                    <input id="inp_apellido" class="form-control" type="text" autocomplete="off">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Precio</label>
-                    <input id="inp_precio" class="form-control" type="text">
-                </div>
-            </form>
-
-                <button id="btn_guardar" class="btn btn-success" style="text-align: center;">Guardar</button>
-                <button id="btn_actualizar" style="display: none;" class="btn btn-primary">Actualizar</button>
-
+          <div class="container">
+            <div class="row" style="text-align: center;">
+                <!-- Elementos generados a partir del JSON -->
+                <main id="items" class="col-sm-8 row" style="background-color:skyblue; border-radius: 10px;">
+                  <h1><img src="/tpevaluativo3/bolsa-icono.png" width="40" height="40"><b> Nuestros Productos</b></h1>
+                </main>
+                <!-- Carrito -->
+                <aside class="col-sm-4" style="background-color:cornflowerblue; border-radius: 10px;">
+                    <h1><img src="/tpevaluativo3/carrito-icono.png" width="40" height="40"><b> Carrito</b></h1>
+                    <!-- Elementos del carrito -->
+                    <ul id="carrito" class="list-group"></ul>
+                    <!-- Precio total -->
+                    <p class="text-right">Total: <span id="total"></span>&euro;</p>
+                    <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+                </aside>
             </div>
-            <div class="col-lg-4" style="background-color:orangered; border-radius: 10% / 50%;">
-                <h1><b>Haz tu Pedido</b></h1>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Nombre</th>
-                            <th>Apellido</th>
-                            <th>Precio</th>
-                            <th>Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tbody">
-
-                    </tbody>
-                </table>
+        </div>
                
                 <!-- Modal -->
                 <div class="modal fade" id="mymodal" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -182,9 +173,6 @@
             </div>
         </div>
     </div>
-    <script src="main.js" type="module"></script>
-    <script src="bootstrap.bundle.min.js"></script>
-    <script src="auxiliares.js"></script>
 
     <!--Footer-->
     <br>

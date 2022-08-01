@@ -1,9 +1,92 @@
-
+/* Font y texto*/
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:wght@600&display=swap');
-
-
 
 a {
     text-decoration: none;
   }
+
+/* Cursores */
+body {
+  cursor: url('http://www.rw-designer.com/cursor-view/179195.png'), pointer;
+  }
+  a:link, a:visited, a:hover, a:active {
+  cursor: url('http://www.rw-designer.com/cursor-view/179196.png'), pointer;
+  }
+
+/* Animación de los encabezados */
+h1 {
+  animation-duration: 1.5s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+/* Color de selección de texto*/
+::selection {
+  background-color: #FD7B14;
+  color: #000000;
+}
+::-moz-selection {
+  background-color: #FD7B14;
+  color: #000000;
+}
+
+::-o-selection {
+  background-color: #FD7B14;
+  color: #000000;
+}
+
+::-ms-selection {
+  background-color: #FD7B14;
+  color: #000000;
+}
+
+::-webkit-selection {
+  background-color: #FD7B14;
+  color: #000000;
+}
+
+/* Barra de Scroll*/
+body {
+  overflow-x: hidden; /* ocultar horizontal */
+  }
+
+::-webkit-scrollbar {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius:100px !important;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #F59A53 !important;
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #FD7B14 !important;
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #DC6304 !important;
+  border-radius: 12px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent !important;
+  border-radius: 12px;
+}
+
+/*hr*/
+hr {
+  border-top: 10px solid blue;
+}
