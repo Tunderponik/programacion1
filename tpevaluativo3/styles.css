@@ -63,10 +63,11 @@ h1 {
 }
 
 /* Barra de Scroll*/
+/* 1) Ocultar Horizontal */
 body {
-  overflow-x: hidden; /* ocultar horizontal */
+  overflow-x: hidden;
   }
-
+/* 2) Colores */
 ::-webkit-scrollbar {
   width: 10px !important;
   height: 10px !important;
