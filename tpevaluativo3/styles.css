@@ -15,9 +15,9 @@ a {
 body {
   cursor: url('http://www.rw-designer.com/cursor-view/179195.png'), pointer;
   }
-  a:link, a:visited, a:hover, a:active {
-  cursor: url('http://www.rw-designer.com/cursor-view/179196.png'), pointer;
-  }
+a:link, a:visited, a:hover, a:active {
+  cursor: url('/tpevaluativo3/cursor-hover.png'), pointer;
+}
 
 /* Animación de los encabezados */
 h1 {
