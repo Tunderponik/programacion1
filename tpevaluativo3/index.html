@@ -16,6 +16,8 @@
   <!--Scripts-->
   <script src="bootstrap.bundle.min.js"></script>
   <script src="producto.js" type="module"></script>
+  <script src="main.js" type="module"></script>
+  <script src="auxiliar.js"></script>
   
   <!--Cascada-->
     <body>
@@ -153,6 +155,77 @@
       </div>
     </div>
   </div>
+
+  <!--Datos-->
+  <h1 style="text-align: center;"><b>Ingresa tus Datos</b></h1>
+  <hr>
+    <div id="formDiv" class="container mt-12 text-center">
+      <div style="background-color: cornflowerblue; border-radius: 10px; color: black;">
+        <div class="row">
+          <div class="col-lg-4">
+                  <form id="form_cliente" >
+                      <div class="mb-3">
+                          <label for="form-label">Nombre</label>
+                          <input id="inp_nombre" class="form-control" type="text">
+                      </div>
+      
+                      <div class="mb-3">
+                          <label for="form-label">Apellido</label>
+                          <input id="inp_apellido" class="form-control" type="text">
+                      </div>
+      
+                      <div class="mb-3">
+                          <label for="form-label">DNI</label>
+                          <input id="inp_dni" class="form-control" type="number">
+                      </div>
+                  </form>
+
+
+              <button id="btn_guardar" class="btn btn-primary" >Guardar</button>
+              <button style="display: none;" id="btn_actualizar" class="btn btn-success">Actualizar</button>
+          </div>
+
+          <div class="col-lg-8">
+
+              <table class="table">
+                  <thead>
+                      <tr>
+                          <th>Nombre</th>
+                          <th>Apellido</th>
+                          <th>DNI</th>
+                          <th>Acciones</th>
+                      </tr>
+                  </thead>
+                  <tbody id="tbody">
+
+                  </tbody>
+              </table>
+
+
+              <!-- Modal -->
+              <div class="modal fade" id="mymodal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">u sure?</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                  aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <img src="https://i.imgflip.com/4/64slsz.jpg" alt="">
+                          </div>
+                          <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                              <button id="btn_eliminar" type="button" class="btn btn-danger">Eliminar</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+    </div>
+</div>
 
     <!--Footer-->
     <br>
